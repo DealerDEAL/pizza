@@ -1,0 +1,89 @@
+#include <stdio.h>
+#include <string>
+#include <stdlib.h> 
+#include <time.h>
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+
+using namespace std;
+
+class Pizzeria {
+        public:
+        string name;
+        int idp, rating;
+        Pizzeria(string name, int idp, int rating) {
+            this->name = name;
+            this->idp = idp;
+            this->rating = rating;
+    }
+    };
+    
+    class Menu{
+        public:
+        int idm, Pizzeria_id;
+        string pizza_name;
+        double price;
+        Menu(int idm, int pizzeria_obj, string pizza_name, double price){
+            this->idm = idm;
+            this->Pizzeria_id = pizzeria_obj; 
+            this->pizza_name = pizza_name;
+            this->price = price;
+        }
+        
+    };
+    
+    class Person{
+        public:
+        int idpe, age;
+        string name, gender, address;
+        Person(int idpe, int age, string name, string gender, string address){
+            this->idpe = idpe;
+            this->age = age;
+            this->gender = gender;
+            this->name = name;
+            this->address = address;
+        }
+    }
+    
+    class Person_visits{
+        int idv, Person_id, Pizzeria_id;
+        time_t visit_date;
+        Person_visits(int idv, int pizzeria_obj, int person_person, time_t visit_date){
+            
+        }
+    }
+    
+    
+int main() {
+    Pizzeria *obj_1 = new Pizzeria("1 piz", 1, 8);
+    Pizzeria *obj_2 = new Pizzeria("2 piz", 2, 5);
+    Pizzeria *obj_3 = new Pizzeria("3 piz", 3, 9);
+    
+    Menu *menu_1 = new Menu(1, obj_1->idp, "1 peper", 320);
+    Menu *menu_2 = new Menu(2, obj_2->idp, "1 mush", 280);
+    Menu *menu_3 = new Menu(3, obj_3->idp, "1 haway", 360);
+    Menu *menu_4 = new Menu(4, obj_1->idp, "1 bbq", 410);
+    Menu *menu_5 = new Menu(5, obj_2->idp, "1 margaret", 260);
+    
+    Person *Person_1 = new Person(1, 18, "male", "at", "folkers street");
+    Person *Person_2 = new Person(2, 18, "male", "ad", "folkers street");
+    Person *Person_3 = new Person(3, 18, "female", "as", "folkers street");
+    Person *Person_4 = new Person(4, 18, "male", "ah", "mermiad street");
+    Person *Person_5 = new Person(5, 18, "male", "af", "folkers street");
+    Person *Person_6 = new Person(6, 18, "male", "ak", "folkers street");
+    Person *Person_7 = new Person(7, 18, "male", "al", "pegas street");
+    Person *Person_8 = new Person(8, 18, "male", "aa", "folkers street");
+    Person *Person_9 = new Person(9, 18, "male", "ar", "folkers street");
+    Person *Person_10 = new Person(10, 18, "male", "ay", "folkers street");
+    
+    
+    
+    cout << menu_5->Pizzeria_id; 
+    
+    // Menu *men1 = new Menu(1, 2);
+    // Menu men1->&Pizzeria_id = idp; 
+    // cout << obj3->name << " " << obj3->id << setw(2) << obj3->rating << "\n";
+    // cout << men1->Pizzeria_id;
+    return 0;
+}
