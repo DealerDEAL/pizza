@@ -47,6 +47,7 @@ class Pizzeria {
     };
     
     class Person_visits{
+        public:
         int idv, Person_id, Pizzeria_id;
         time_t visit_date;
         Person_visits(int idv, int pizzeria_obj, int person_person, time_t visit_date){
@@ -80,23 +81,19 @@ int main() {
     Person *Person_9 = new Person(9, 18, "male", "ar", "folkers street");
     Person *Person_10 = new Person(10, 18, "male", "ay", "folkers street");
     
-    Person_visits *visit_1 = new Person_visits(1, obj_1->idp, Person_1->idpe, 0);
-    Person_visits *visit_2 = new Person_visits(2, obj_2->idp, Person_2->idpe, 1);
-    Person_visits *visit_3 = new Person_visits(3, obj_3->idp, Person_3->idpe, 6);
-    Person_visits *visit_4 = new Person_visits(4, obj_1->idp, Person_4->idpe, 24);
-    Person_visits *visit_5 = new Person_visits(5, obj_2->idp, Person_5->idpe, 12);
-    Person_visits *visit_6 = new Person_visits(6, obj_3->idp, Person_6->idpe, 3);
-    Person_visits *visit_7 = new Person_visits(7, obj_1->idp, Person_7->idpe, 10);
-    Person_visits *visit_8 = new Person_visits(8, obj_2->idp, Person_8->idpe, 8);
-    Person_visits *visit_9 = new Person_visits(9, obj_3->idp, Person_9->idpe, 9);
-    Person_visits *visit_10 = new Person_visits(10, obj_1->idp, Person_10->idpe, 17);
+    Person_visits *visit_1 = new Person_visits(1, obj_1->idp, Person_1->idpe, time(NULL));
+    Person_visits *visit_2 = new Person_visits(2, obj_2->idp, Person_2->idpe, time(NULL));
+    Person_visits *visit_3 = new Person_visits(3, obj_3->idp, Person_3->idpe, time(NULL));
+    Person_visits *visit_4 = new Person_visits(4, obj_1->idp, Person_4->idpe, time(NULL));
+    Person_visits *visit_5 = new Person_visits(5, obj_2->idp, Person_5->idpe, time(NULL));
+    Person_visits *visit_6 = new Person_visits(6, obj_3->idp, Person_6->idpe, time(NULL));
+    Person_visits *visit_7 = new Person_visits(7, obj_1->idp, Person_7->idpe, time(NULL));
+    Person_visits *visit_8 = new Person_visits(8, obj_2->idp, Person_8->idpe, time(NULL));
+    Person_visits *visit_9 = new Person_visits(9, obj_3->idp, Person_9->idpe, time(NULL));
+    Person_visits *visit_10 = new Person_visits(10, obj_1->idp, Person_10->idpe, time(NULL));
     
     
-    cout << visit_5->Person_id; 
+    cout << visit_2->visit_date; 
     
-    // Menu *men1 = new Menu(1, 2);
-    // Menu men1->&Pizzeria_id = idp; 
-    // cout << obj3->name << " " << obj3->id << setw(2) << obj3->rating << "\n";
-    // cout << men1->Pizzeria_id;
     return 0;
 }
