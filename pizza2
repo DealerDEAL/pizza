@@ -5,116 +5,18 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
+#include "menu.h"
 
 using namespace std;
 
-class Pizzeria {
-        char name[256];
-        unsigned idp;
-        int rating[11];
-        public:
-        Pizzeria(const char* name="unknown", unsigned idp = 0, int* rating = NULL);
-        Pizzeria(char*, unsigned, int*);
-        
-        const char* get_name() const {return name;}    //метод, отдающий имя
-        unsigned    get_idp()  const {return idp; }
-        int*    get_rating()  const {return rating; }
-    };
-    
-Pizzeria::Pizzeria(const char* name_, unsigned idp_, int* rating_){
-        strcpy(name, name_);    //записываем пришедшее значение в данное класса
-        idp = idp_;  
-        rating = rating_;
-    }
-    
-    class Menu{
-        public:
-        int idm, Pizzeria_id;
-        string pizza_name;
-        double price;
-        Menu(int idm, int pizzeria_obj, string pizza_name, double price){
-            this->idm = idm;
-            this->Pizzeria_id = pizzeria_obj; 
-            this->pizza_name = pizza_name;
-            this->price = price;
-        }
-        
-    };
-    
-    class Person{
-        public:
-        int idpe, age;
-        string name, gender, address;
-        Person(int idpe, int age, string name, string gender, string address){
-            this->idpe = idpe;
-            this->age = age;
-            this->gender = gender;
-            this->name = name;
-            this->address = address;
-        }
-    };
-    
-    class Person_visits{
-        public:
-        int idv, Person_id, Pizzeria_id;
-        time_t visit_date;
-        Person_visits(int idv, int pizzeria_obj, int person_person, time_t visit_date){
-            this-> idv = idv;
-            this-> Pizzeria_id = pizzeria_obj;
-            this-> Person_id = person_person;
-            this-> visit_date = visit_date;
-        }
-    };
-    
-    void gender_visit(Person_visits* visit_1){
-        std::cout << visit_1 -> Person_id << std::endl;
-        
-    }
-    
-    
 int main() {
-    Pizzeria piz_arr[3];
-    piz_arr[0] = new Pizzeria("1 piz", 1, 1);
-    piz_arr[1] = new Pizzeria("2 piz", 2, 5);
-    piz_arr[2] = new Pizzeria("3 piz", 3, 9);
-    
-    Menu *menu_1 = new Menu(1, obj_1->idp, "1 peper", 320);
-    Menu *menu_2 = new Menu(2, obj_2->idp, "1 mush", 280);
-    Menu *menu_3 = new Menu(3, obj_3->idp, "1 haway", 360);
-    Menu *menu_4 = new Menu(4, obj_1->idp, "1 bbq", 410);
-    Menu *menu_5 = new Menu(5, obj_2->idp, "1 margaret", 260);
-    
-    Person *Person_1 = new Person(1, 18, "male", "at", "folkers street");
-    Person *Person_2 = new Person(2, 18, "male", "ad", "folkers street");
-    Person *Person_3 = new Person(3, 18, "female", "as", "folkers street");
-    Person *Person_4 = new Person(4, 18, "male", "ah", "mermiad street");
-    Person *Person_5 = new Person(5, 18, "male", "af", "folkers street");
-    Person *Person_6 = new Person(6, 18, "female", "ak", "folkers street");
-    Person *Person_7 = new Person(7, 18, "male", "al", "pegas street");
-    Person *Person_8 = new Person(8, 18, "male", "aa", "folkers street");
-    Person *Person_9 = new Person(9, 18, "female", "ar", "folkers street");
-    Person *Person_10 = new Person(10, 18, "male", "ay", "folkers street");
-    
-    Person_visits *visit_1 = new Person_visits(1, obj_1->idp, Person_1->idpe, time(NULL));
-    Person_visits *visit_2 = new Person_visits(2, obj_2->idp, Person_2->idpe, time(NULL));
-    Person_visits *visit_3 = new Person_visits(3, obj_3->idp, Person_3->idpe, time(NULL));
-    Person_visits *visit_4 = new Person_visits(4, obj_1->idp, Person_4->idpe, time(NULL));
-    Person_visits *visit_5 = new Person_visits(5, obj_2->idp, Person_5->idpe, time(NULL));
-    Person_visits *visit_6 = new Person_visits(6, obj_3->idp, Person_6->idpe, time(NULL));
-    Person_visits *visit_7 = new Person_visits(7, obj_1->idp, Person_7->idpe, time(NULL));
-    Person_visits *visit_8 = new Person_visits(8, obj_2->idp, Person_8->idpe, time(NULL));
-    Person_visits *visit_9 = new Person_visits(9, obj_3->idp, Person_9->idpe, time(NULL));
-    Person_visits *visit_10 = new Person_visits(10, obj_1->idp, Person_10->idpe, time(NULL));
-    
-    /*cout << "what id Person gender you want";
-    int id_gen;
-    std::cin >> id_gen;
-    for(int i = 0; i < 10; i++){
-        if(i == id_gen){
-         gender_visit(visit_i); 
-        }
-    }*/
-    
+    int i = 0;
+    //pd(i);
+    Pizzeria c;
+    c.Pizzeria_data(i);
+    menu k;
+    k.md(i, c);
+
     
     return 0;
 }
