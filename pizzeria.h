@@ -13,8 +13,8 @@ class Pizzeria {
     int arr = 3;
     string name[3];
     unsigned int ratting[3];
-    int Pizzeria_data(){ 
-        for(int i = 0; i < arr; i++){
+    int Pizzeria_data(int i){ 
+        for(i = 0; i < arr; i++){
             ratting[i] = i + 1;
             cin >> name[i];
             cout << name[i] << setw(3) << ratting[i] << "\n";
