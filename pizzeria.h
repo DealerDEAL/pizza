@@ -20,7 +20,7 @@ class Pizzeria {
             ratting[i] = my_rand();
             cin >> name[i];
             id = i + 1;
-            cout << name[i] << setw(3) << ratting[i] << "\n";
+            cout << name[i] << setw(3) << ratting[i] << setw(3) << id[i] << "\n";
         }
         return 0;
     }
