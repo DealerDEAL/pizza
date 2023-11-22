@@ -1,11 +1,5 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h> 
-#include <time.h>
-#include <iostream>
-#include <iomanip>
-#include <fstream>
 #include "menu.h"
+#include "person.h"
 
 using namespace std;
 
@@ -13,9 +7,11 @@ int main() {
     int i = 0;
     //pd(i);
     Pizzeria c;
-    c.Pizzeria_data(i);
+    c.Pd(i);
     menu k;
-    k.md(i, c);
+    k.Md(i, c);
+    person b;
+    b.pd(i);
 
     
     return 0;
