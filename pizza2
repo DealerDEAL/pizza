@@ -1,18 +1,19 @@
-#include "menu.h"
-#include "person.h"
+#include "person_order.h"
 
 using namespace std;
 
 int main() {
     int i = 0;
-    //pd(i);
     Pizzeria c;
     c.Pd(i);
     menu k;
     k.Md(i, c);
     person b;
     b.pd(i);
-
+    person_order m;
+    m.Po(i, k, b);
+    person_visit a;
+    a.Pv(i, c, b);
     
     return 0;
 }
