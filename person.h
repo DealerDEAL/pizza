@@ -36,4 +36,3 @@ class person{
         return 0;
     }
 };
-
